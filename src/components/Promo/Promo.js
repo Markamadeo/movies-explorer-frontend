@@ -1,5 +1,4 @@
 import Header from "../Header/Header";
-import { Redirect, Route, Switch, useHistory } from "react-router-dom";
 import promoLogo from "../../images/promo-logo.svg";
 
 function Promo(props) {

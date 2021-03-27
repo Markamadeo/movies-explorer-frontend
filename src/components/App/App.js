@@ -1,4 +1,3 @@
-import Preloader from '../Preloader/Preloader';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import Main from '../Main/Main';
 
@@ -8,6 +7,12 @@ function App() {
       <Switch>
         <Route path="/">
           <Main/>
+        </Route>
+        <Route path="/signin">
+          Страница входа
+        </Route>
+        <Route path="/signup">
+          Страница регистрации
         </Route>
       </Switch>
     </div>

@@ -2,7 +2,7 @@
   margin: auto;
   max-width: 1280px;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   align-content: flex-start;
   display: grid;
   grid-template-columns: 1fr;
