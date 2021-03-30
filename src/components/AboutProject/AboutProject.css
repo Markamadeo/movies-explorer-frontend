@@ -84,9 +84,6 @@
   color: #A0A0A0;
 }
 
-.about-project__duration-text:last-child {
-}
-
 @media screen and (max-width: 768px) {
   .about-project__title {
     margin-bottom: 22px;

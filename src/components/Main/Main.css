@@ -5,11 +5,16 @@
 .main__section {
   display: flex;
   flex-direction: column;
-  padding: 90px 50px;
+  padding: 110px 70px;
   width: 100%;
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 768px) {
+  .main__section {
+    padding: 90px 50px;
+  }
+}
 
 @media screen and (max-width: 425px) {
   .main__section {
