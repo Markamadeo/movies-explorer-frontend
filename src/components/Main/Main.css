@@ -1,0 +1,18 @@
+.main {
+  width: 100%;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+  padding: 90px 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 425px) {
+  .main__section {
+    padding: 70px 18px;
+  }
+}

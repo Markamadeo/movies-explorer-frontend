@@ -1,8 +1,12 @@
-import Promo from '../Promo/Promo';
+import Promo from "../Promo/Promo";
+import AboutProject from '../AboutProject/AboutProject ';
 
 function Main(props) {
   return (
-    <Promo/>
+    <div className='main'>
+      <Promo />
+      <AboutProject />
+    </div>
   );
 }
 
