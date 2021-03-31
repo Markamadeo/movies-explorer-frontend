@@ -1,19 +1,19 @@
-import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
-import Main from '../Main/Main';
+import { Redirect, Route, Switch, useHistory } from "react-router-dom";
+import Main from "../Main/Main";
+import Movies from "../Movies/Movies";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Switch>
-        <Route path="/">
-          <Main/>
+        <Route exact path="/">
+          <Main />
         </Route>
-        <Route path="/signin">
-          Страница входа
+        <Route path="/movies">
+          <Movies />
         </Route>
-        <Route path="/signup">
-          Страница регистрации
-        </Route>
+        <Route path="/signin">Страница входа</Route>
+        <Route path="/signup">Страница регистрации</Route>
       </Switch>
     </div>
   );
