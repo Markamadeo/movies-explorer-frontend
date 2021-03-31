@@ -1,0 +1,138 @@
+.about-me__container {
+  display: flex;
+  margin: 66px 0 100px;
+  justify-content: space-between;
+}
+
+.about-me__text-items {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  max-width: 600px;
+}
+
+.about-me__title-name {
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+  padding: 0;
+  margin: 0;
+}
+
+.about-me__short-description {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 18px;
+}
+
+.about-me__full-description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 26px;
+}
+
+.about-me__social-links-container {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 100px 0 0;
+}
+
+.about-me__social-item:last-child {
+  margin-left: 20px;
+}
+
+.about-me__social-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #000;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.about-me__social-link:hover {
+  opacity: 0.6;
+}
+
+.about-me__profile-photo {
+  max-width: 270px;
+  height: 82.5%;
+  margin-left: 49px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me__container {
+    margin: 66px 0 90px;
+  }
+
+  .about-me__text-items {
+    max-width: 364px;
+  }
+
+  .about-me__title-name {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .about-me__short-description {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+
+  .about-me__full-description {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 20px;
+  }
+
+  .about-me__social-links-container {
+    margin: 87px 0 0;
+  }
+
+  .about-me__social-item:last-child {
+    margin-left: 25px;
+  }
+
+  .about-me__profile-photo {
+    max-width: 255px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .about-me__container {
+    flex-direction: column;
+    align-items: center;
+    margin: 66px 0 69px;
+  }
+
+  .about-me__text-items {
+    max-width: 288px;
+  }
+
+  .about-me__title-name {
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 40px;
+  }
+
+  .about-me__short-description {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+
+  .about-me__profile-photo {
+    order: -1;
+    max-width: 288px;
+    margin: 0;
+  }
+}
