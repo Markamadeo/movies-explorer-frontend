@@ -1,4 +1,4 @@
-const cardsList = [
+export const cardsListMovies = [
   {
     "id": 1,
     "nameRU": "«Роллинг Стоунз» в изгнании",
@@ -723,4 +723,217 @@ const cardsList = [
   },
 ];
 
-export default cardsList;
+export const savedCardList = [
+  {
+    id: 76,
+    nameRU: " Возможности безграничны",
+    nameEN: "The Possibilities Are Endless",
+    director: "Джеймс Холл, Эдвард Лавлэйс",
+    country: "Великобритания, США",
+    year: "2014",
+    duration: 83,
+    description: "Десять лет назад его хватил удар — он был в коме шесть месяцев и мог выговаривать только слова «да», «нет», «Грейс Максвелл» (имя его жены и менеджера) и «возможности безграничны». Он — Эдвин Коллинс: фронтмен прославленной шотландской постпанк-группы Orange Juice. Несмотря ни на что, он записал несколько сольных альбомов. «Possibilities Are Endless» — это экспериментальный, невероятно красиво снятый документальный фильм: с абстрактными картинами родного для героя Хелмсдейла, трогательными сценами помощи Грейс Коллинсу, который все-таки смог еще появиться на сцене. В равной степени — попытка понять чувства пережившего инсульт, история одной великой любви и высказывание о безграничной силе музыки.",
+    trailerLink: "https://www.youtube.com/watch?v=2pCKC9MioDA",
+    created_at: "2020-12-03T16:59:17.595Z",
+    updated_at: "2020-12-03T16:59:17.595Z",
+    image: {
+    id: 77,
+    name: "maxresdefault (2)",
+    alternativeText: "",
+    caption: "",
+    width: 1280,
+    height: 720,
+    formats: {
+    thumbnail: {
+    hash: "thumbnail_maxresdefault_2_3072271808",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 245,
+    height: 138,
+    size: 11.14,
+    path: null,
+    url: "/uploads/thumbnail_maxresdefault_2_3072271808.jpeg"
+    },
+    large: {
+    hash: "large_maxresdefault_2_3072271808",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 1000,
+    height: 563,
+    size: 207.98,
+    path: null,
+    url: "/uploads/large_maxresdefault_2_3072271808.jpeg"
+    },
+    medium: {
+    hash: "medium_maxresdefault_2_3072271808",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 750,
+    height: 422,
+    size: 119.53,
+    path: null,
+    url: "/uploads/medium_maxresdefault_2_3072271808.jpeg"
+    },
+    small: {
+    hash: "small_maxresdefault_2_3072271808",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 500,
+    height: 281,
+    size: 50.39,
+    path: null,
+    url: "/uploads/small_maxresdefault_2_3072271808.jpeg"
+    }
+    },
+    hash: "maxresdefault_2_3072271808",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    size: 327.2,
+    url: "/uploads/maxresdefault_2_3072271808.jpeg",
+    previewUrl: null,
+    provider: "local",
+    provider_metadata: null,
+    created_at: "2020-12-03T16:57:41.958Z",
+    updated_at: "2020-12-03T16:57:41.958Z"
+    }
+    },
+    {
+    id: 77,
+    nameRU: "Ламберт и Стэмп",
+    nameEN: "Lambert & Stamp",
+    director: "Джеймс Д. Купер",
+    country: "США",
+    year: "2014",
+    duration: 117,
+    description: "Свингующий Лондон конца 60-х — начала 70-х. Темные очки, галстуки, оллнайтеры и прочие атрибуты самых первых модов. Группа, написавшая песню «My Generation» и рок-оперу «Tommy». Все это «Lambert & Stamp» — не столько портрет менеджеров группы The Who, вообще-то, сначала мечтавших снять о ней документальный фильм, сколько рассказ о начале самой прекрасной эпохи для гитарной музыки. Как в одном музыкальном коллективе работники офиса и завода уживались со студентом арт-школы и гениальным барабанщиком, чинившим радио? Почему два совершенно разных человека — гей-интеллектуал и брат актера Теренса Стэмпа — решили их продюсировать, хотя считали уродливыми? Насколько огромную роль все они сыграли для своего времени — и что со всеми с ними стало после успеха? Все это заинтересовало отлично дебютировавшего режиссера Джеймса Д.Купера.",
+    trailerLink: "https://www.youtube.com/watch?v=YMaRbIBUvps",
+    created_at: "2020-12-03T17:04:21.375Z",
+    updated_at: "2020-12-03T17:04:21.375Z",
+    image: {
+    id: 78,
+    name: "images",
+    alternativeText: "",
+    caption: "",
+    width: 300,
+    height: 168,
+    formats: {
+    thumbnail: {
+    hash: "thumbnail_images_f324307a7f",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 245,
+    height: 137,
+    size: 8.17,
+    path: null,
+    url: "/uploads/thumbnail_images_f324307a7f.jpeg"
+    }
+    },
+    hash: "images_f324307a7f",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    size: 10.05,
+    url: "/uploads/images_f324307a7f.jpeg",
+    previewUrl: null,
+    provider: "local",
+    provider_metadata: null,
+    created_at: "2020-12-03T17:01:26.006Z",
+    updated_at: "2020-12-03T17:01:26.006Z"
+    }
+    },
+    {
+    id: 78,
+    nameRU: "Ли Скретч Перри: Виденье рая",
+    nameEN: "Lee Scratch Perry’s Vision of Paradise",
+    director: "Фолькер Шанер",
+    country: "Германия, Великобритания, Швейцария, Ямайка, Эфиопия",
+    year: "2015",
+    duration: 100,
+    description: "Перед тем как стать человеком, он был рыбой. Сейчас Ли «Скретч» Перри называет себя не иначе как Ноем. Его религия — его сердце; его законы просты — ганджа должна быть свободной, а бога нужно развлекать. Он продюсировал Боба Марли и писал альбом с The Orb, работал с Китом Ричардсом, Beastie Boys и Дэвидом Линчем, научил многих музыкантов пользоваться студией как инструментом и выпустил не один грандиозный даб-альбом. Он разговаривает с коровой и каждое утро вслух приветствует свой компьютер, кружится с раскинутыми руками вокруг Букингемского дворца и напоминает, что все тени одного цвета. «Visions of Paradise» — это документальная сказка по мотивам 13 лет, проведенных немецким режиссером Фолькером Шанером в компании Ли Перри, от Ямайки и Эфиопии до Швейцарии и Лондона. Герой в ней предстает то ли поехавшим дедом, рассуждающим о космических путешествиях, то ли настоящим магом. То есть, вообще говоря, как тем, так и другим.",
+    trailerLink: "https://www.youtube.com/watch?v=9mvjnZAgUNA",
+    created_at: "2020-12-03T17:09:04.230Z",
+    updated_at: "2020-12-03T17:09:04.230Z",
+    image: {
+    id: 79,
+    name: "unnamed",
+    alternativeText: "",
+    caption: "",
+    width: 512,
+    height: 362,
+    formats: {
+    thumbnail: {
+    hash: "thumbnail_unnamed_4f99c0fa1e",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 221,
+    height: 156,
+    size: 12.75,
+    path: null,
+    url: "/uploads/thumbnail_unnamed_4f99c0fa1e.jpeg"
+    },
+    small: {
+    hash: "small_unnamed_4f99c0fa1e",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 500,
+    height: 354,
+    size: 56.29,
+    path: null,
+    url: "/uploads/small_unnamed_4f99c0fa1e.jpeg"
+    }
+    },
+    hash: "unnamed_4f99c0fa1e",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    size: 60.22,
+    url: "/uploads/unnamed_4f99c0fa1e.jpeg",
+    previewUrl: null,
+    provider: "local",
+    provider_metadata: null,
+    created_at: "2020-12-03T17:04:50.419Z",
+    updated_at: "2020-12-03T17:04:50.419Z"
+    }
+    },
+    {
+    id: 79,
+    nameRU: "Любимый небесами",
+    nameEN: "Heaven Adores You",
+    director: "Николас Дилан Росси",
+    country: "США",
+    year: "2014",
+    duration: 104,
+    description: "«Я не то чтобы хотел стать знаменитым», — неуверенным, немного ноющим голосом говорит музыкант, для которого номинация его песни на «Оскар» стала нелепым, странным и пугающим событием. В 2003 году он, согласно одной из версий, покончил с собой, воткнув нож себе в грудь. Вразрез с угрюмым началом «Heaven Adores You» — это удивительно духоподъемный, бережно, с обожанием и преданностью сконструированный фильм не об ужасной истории сгорания, не о зависимостях и депрессии, но о прекрасном человеке и музыканте, который жив до сих пор, пусть так только кажется после просмотра. Интервью друзей и причастных, ранее не слышанная музыка и другие раскопки вроде фотографий со школьными друзьями, картины гордов, включая Портленд, где он был знаменит, пока всему миру было наплевать, и Лос-Анджелес, где на бульваре Сансет есть стена в его честь.",
+    trailerLink: "https://www.youtube.com/watch?v=qYy_OBMdcQo",
+    created_at: "2020-12-03T17:10:52.837Z",
+    updated_at: "2020-12-03T17:10:52.837Z",
+    image: {
+    id: 80,
+    name: "загруженное",
+    alternativeText: "",
+    caption: "",
+    width: 275,
+    height: 183,
+    formats: {
+    thumbnail: {
+    hash: "thumbnail_zagruzhennoe_a32e347316",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    width: 234,
+    height: 156,
+    size: 9.22,
+    path: null,
+    url: "/uploads/thumbnail_zagruzhennoe_a32e347316.jpeg"
+    }
+    },
+    hash: "zagruzhennoe_a32e347316",
+    ext: ".jpeg",
+    mime: "image/jpeg",
+    size: 9.76,
+    url: "/uploads/zagruzhennoe_a32e347316.jpeg",
+    previewUrl: null,
+    provider: "local",
+    provider_metadata: null,
+    created_at: "2020-12-03T17:09:56.363Z",
+    updated_at: "2020-12-03T17:09:56.363Z"
+    }
+    },
+];

@@ -4,16 +4,15 @@ import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import MoreMovies from "../MoreMovies/MoreMovies";
 
-function Movies({ cards }) {
+function SavedMovies({ cards }) {
   return (
     <section className="movies">
       <Header />
       <SearchForm />
-      <MoviesCardList cards={cards}/>
-      <MoreMovies />
+      <MoviesCardList cards={cards} />
       <Footer />
     </section>
   );
 }
 
-export default Movies;
+export default SavedMovies;
