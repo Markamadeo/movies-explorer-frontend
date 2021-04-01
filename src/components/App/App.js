@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch, useHistory } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 
@@ -12,6 +12,7 @@ function App() {
         <Route path="/movies">
           <Movies />
         </Route>
+        <Route path="/saved-movies">Сохраненные фильмы</Route>
         <Route path="/signin">Страница входа</Route>
         <Route path="/signup">Страница регистрации</Route>
       </Switch>

@@ -8,23 +8,17 @@ function SearchForm(props) {
   }
 
   return (
-    <section className="movies__section">
-      <form name="search-movies" className="search-form">
-        <div className="search-form__find-container">
-          <input
-            type="text"
-            className="search-form__input"
-            placeholder="Фильм"
-          />
-          <button
-            onClick={handleSubmit}
-            type="submit"
-            className="search-form__search-button"
-          ></button>
-        </div>
-        <FilterCheckbox shortFilm={shortFilm} setShortFilm={setShortFilm} />
-      </form>
-    </section>
+    <form name="search-movies" className="search-form movies__section">
+      <div className="search-form__find-container">
+        <input type="text" className="search-form__input" placeholder="Фильм" />
+        <button
+          onClick={handleSubmit}
+          type="submit"
+          className="search-form__search-button"
+        ></button>
+      </div>
+      <FilterCheckbox shortFilm={shortFilm} setShortFilm={setShortFilm} />
+    </form>
   );
 }
 
