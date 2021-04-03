@@ -3,6 +3,7 @@ import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from '../SavedMovies/SavedMovies';
 import { cardsListMovies, savedCardList } from "../../utils/tamplateCardsList";
+import Register from '../Register/Register';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/saved-movies">
           <SavedMovies cards={savedCardList}/>
+        </Route>
+        <Route path="/signup">
+          <Register />
         </Route>
         <Route path="/signin">Страница входа</Route>
         <Route path="/signup">Страница регистрации</Route>

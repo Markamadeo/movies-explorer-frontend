@@ -1,0 +1,30 @@
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 396px;
+  width: 100%;
+  margin: 70px auto 0;
+}
+
+.greeting__text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 0;
+  margin: 40px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .greeting {
+    margin: 232px auto 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .greeting {
+    margin: 56px auto 0;
+    max-width: 260px;
+    align-items: center;
+  }
+}

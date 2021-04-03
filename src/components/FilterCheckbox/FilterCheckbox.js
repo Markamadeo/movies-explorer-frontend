@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function FilterCheckbox({ setShortFilm, shortFilm }) {
   const [checked, setChecked] = useState(false);
