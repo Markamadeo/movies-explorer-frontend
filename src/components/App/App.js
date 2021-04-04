@@ -4,6 +4,7 @@ import Movies from "../Movies/Movies";
 import SavedMovies from '../SavedMovies/SavedMovies';
 import { cardsListMovies, savedCardList } from "../../utils/tamplateCardsList";
 import Register from '../Register/Register';
+import Login from '../Login/Login';
 
 
 function App() {
@@ -22,7 +23,9 @@ function App() {
         <Route path="/signup">
           <Register />
         </Route>
-        <Route path="/signin">Страница входа</Route>
+        <Route path="/signin">
+          <Login />
+        </Route>
         <Route path="/signup">Страница регистрации</Route>
       </Switch>
     </div>
