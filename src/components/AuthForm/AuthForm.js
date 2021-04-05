@@ -11,7 +11,7 @@ function AuthForm(props) {
   };
 
   return (
-    <form className="auth-form">
+    <form className="form auth-form">
       <Switch>
         <Route path="/signup">
           <div className="auth-form__text-input">
@@ -81,7 +81,7 @@ function AuthForm(props) {
       </div>
       <div className="auth-form__submit-container">
         <button
-          disabled ={!dataForm.isValid}
+          disabled={!dataForm.isValid}
           type="submit"
           onClick={handleSubmit}
           className="auth-form__submit-button"

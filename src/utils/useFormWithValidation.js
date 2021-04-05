@@ -11,8 +11,13 @@ export function useFormWithValidation() {
     const value = target.value;
     setValues({ ...values, [name]: value });
     setErrors({ ...errors, [name]: target.validationMessage });
-    setIsValid(target.closest(".auth-form").checkValidity());
+    setIsValid(target.closest(".form").checkValidity());
   };
 
-  return { values, handleChange, errors, isValid };
+  const handleSetDefaultValue = (data) => {
+    setValues({ ...values, name: data.name, email: data.email });
+    setIsValid(true);
+  };
+
+  return { values, handleChange, handleSetDefaultValue, errors, isValid };
 }
