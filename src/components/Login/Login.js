@@ -1,12 +1,11 @@
-import AuthForm from '../AuthForm/AuthForm';
-import Greeting from '../Greeting/Greeting';
+import AuthForm from "../AuthForm/AuthForm";
+import Greeting from "../Greeting/Greeting";
 
-function Register(props) {
-
+function Register({ setLoggedIn }) {
   return (
     <section className="login">
-      <Greeting greetingText={"Рады видеть!"}/>
-      <AuthForm />
+      <Greeting greetingText={"Рады видеть!"} />
+      <AuthForm setLoggedIn={setLoggedIn} />
     </section>
   );
 }

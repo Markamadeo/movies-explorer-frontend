@@ -1,13 +1,49 @@
-import { Route, Switch } from "react-router";
+import { Route, Switch, useHistory } from "react-router";
 import { validateStringName } from "../../utils/utils";
 import { useFormWithValidation } from "../../utils/useFormWithValidation";
 import { Link } from "react-router-dom";
+import authApi from "../../utils/authApi";
 
-function AuthForm(props) {
+function AuthForm({ setLoggedIn }) {
+  const history = useHistory();
   const dataForm = useFormWithValidation();
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    if (history.location.pathname === "/signin") {
+      authApi
+        .authorizationUser({
+          email: dataForm.values.email,
+          password: dataForm.values.password,
+        })
+        .then((data) => {
+          setLoggedIn({
+            status: true,
+          });
+          history.push("/movies");
+        })
+        .catch((err) => console.log(err));
+    }
+
+    if (history.location.pathname === "/signup") {
+      authApi
+        .authenticationUser(dataForm.values)
+        .then((data) => {
+          authApi
+            .authorizationUser({
+              email: dataForm.values.email,
+              password: dataForm.values.password,
+            })
+            .then((data) => {
+              setLoggedIn({
+                status: true,
+              });
+              history.push("/movies");
+            })
+            .catch((err) => console.log(err));
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (

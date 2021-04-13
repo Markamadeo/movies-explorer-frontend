@@ -1,10 +1,10 @@
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList({ cards }) {
+function MoviesCardList({ movies }) {
   return (
     <ul className="movies-card-list movies__section">
-      {cards.map((dataCard) => {
-        return <MoviesCard key={dataCard.id} dataCard={dataCard} />;
+      {movies.map((dataFilm) => {
+        return <MoviesCard key={dataFilm.id} dataFilm={dataFilm} />;
       })}
     </ul>
   );

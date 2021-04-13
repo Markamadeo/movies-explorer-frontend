@@ -10,6 +10,16 @@
   padding: 0 70px;
 }
 
+.movies__content-text {
+  display: flex;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  max-width: 320px;
+  margin: auto;
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 768px) {
   .movies__section {
     padding: 0 30px;

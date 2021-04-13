@@ -1,16 +1,30 @@
 import { useState } from "react";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 
-function SearchForm(props) {
+function SearchForm({ setMoviesContentText, createFilmsList }) {
   const [shortFilm, setShortFilm] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+
+  function handleChange(evt) {
+    setInputValue(evt.target.value);
+  }
+
   function handleSubmit(evt) {
     evt.preventDefault();
+    createFilmsList(inputValue);
   }
 
   return (
     <form name="search-movies" className="search-form movies__section">
       <div className="search-form__find-container">
-        <input type="text" className="search-form__input" placeholder="Фильм" />
+        <input
+          value={inputValue}
+          onChange={handleChange}
+          type="text"
+          className="search-form__input"
+          placeholder="Фильм"
+          required
+        />
         <button
           onClick={handleSubmit}
           type="submit"

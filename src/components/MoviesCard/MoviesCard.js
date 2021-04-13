@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Route, Switch } from "react-router";
 
-function MoviesCard({ dataCard }) {
+function MoviesCard({ dataFilm }) {
   const baseBeatfilmUrl = "https://api.nomoreparties.co";
   const [liked, setLiked] = useState(false);
 
@@ -15,19 +15,19 @@ function MoviesCard({ dataCard }) {
     <li className="movies-card">
       <a
         className="movies-card__trailer-link"
-        href={dataCard.trailerLink}
+        href={dataFilm.trailerLink}
         target="_blank"
         rel="noreferrer"
       >
         <img
           className="movies-card__image"
-          src={`${baseBeatfilmUrl}${dataCard.image.url}`}
-          alt={dataCard.nameRU}
+          src={`${baseBeatfilmUrl}${dataFilm.image.url}`}
+          alt={dataFilm.nameRU}
         />
       </a>
       <div className="movies-card__discription-items">
         <div className="movie-card__discription-container">
-          <p className="movies-card__film-name">{dataCard.nameRU}</p>
+          <p className="movies-card__film-name">{dataFilm.nameRU}</p>
           <Switch>
             <Route exact path="/movies">
               <button
@@ -50,10 +50,10 @@ function MoviesCard({ dataCard }) {
           </Switch>
         </div>
         <p className="movies-card__duration">
-          {dataCard.duration <= 60
-            ? `${dataCard.duration}м`
-            : `${Math.floor(dataCard.duration / 60)}ч${
-                dataCard.duration % 60
+          {dataFilm.duration <= 60
+            ? `${dataFilm.duration}м`
+            : `${Math.floor(dataFilm.duration / 60)}ч${
+                dataFilm.duration % 60
               }м`}
         </p>
       </div>

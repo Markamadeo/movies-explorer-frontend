@@ -3,12 +3,12 @@ import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 
-function SavedMovies({ cards }) {
+function SavedMovies({ cards, loggedIn }) {
   return (
     <section className="movies">
-      <Header />
+      <Header loggedIn={loggedIn} />
       <SearchForm />
-      <MoviesCardList cards={cards} />
+      <MoviesCardList movies={cards} />
       <Footer />
     </section>
   );
