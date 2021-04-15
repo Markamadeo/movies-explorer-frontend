@@ -40,7 +40,7 @@ function App() {
       .catch((err) => console.log(err));
 
     mainApi.getSavedMovies().then((movies) => {
-      if(movies.data.lenght === 0){
+      if(!movies){
         setSavedMovies([])
         return;
       }
