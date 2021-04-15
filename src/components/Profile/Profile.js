@@ -82,7 +82,12 @@ function Profile({ loggedIn, setCurrentUser, setLoggedIn }) {
 
   function handleLogout(evt) {
     evt.preventDefault();
-    authApi.logout();
+    authApi
+      .logout()
+      .then((res) => {
+        localStorage.removeItem("beatFilms");
+      })
+      .catch((err) => console.log(err));
     setLoggedIn({ status: false });
     history.push("/");
   }

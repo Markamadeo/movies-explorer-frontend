@@ -1,27 +1,69 @@
 import { useState } from "react";
 import { Route, Switch } from "react-router";
+import mainApi from "../../utils/MainApi";
 
-function MoviesCard({ dataFilm }) {
-  const baseBeatfilmUrl = "https://api.nomoreparties.co";
-  const [liked, setLiked] = useState(false);
+function MoviesCard({ dataFilm, savedMovies, setSavedMovies }) {
+  const [liked, setLiked] = useState(dataFilm.liked);
 
   function handleLike() {
+    if (!liked) {
+      mainApi
+        .savedMovie(dataFilm)
+        .then((response) => {
+          dataFilm.liked = true;
+          mainApi.getSavedMovies().then((savedMovies) => {
+            setSavedMovies([...savedMovies.data]);
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    if (liked) {
+      savedMovies.forEach((savedMovie) => {
+        if (savedMovie.movieId === dataFilm.movieId) {
+          mainApi
+            .deleteMovie(savedMovie._id)
+            .then((res) => {
+              dataFilm.liked = false;
+              mainApi.getSavedMovies().then((savedMovies) => {
+                setSavedMovies([...savedMovies.data]);
+              });
+            })
+            .catch((err) => console.log(err));
+        }
+      });
+    }
     setLiked(!liked);
   }
 
-  function handleDelete() {}
+  function handleDelete() {
+    savedMovies.forEach((savedMovie) => {
+      if (savedMovie.movieId === dataFilm.movieId) {
+        mainApi
+          .deleteMovie(savedMovie._id)
+          .then((res) => {
+            dataFilm.liked = false;
+            mainApi.getSavedMovies().then((savedMovies) => {
+              setSavedMovies([...savedMovies.data]);
+            });
+          })
+          .catch((err) => console.log(err));
+      }
+    });
+  }
 
   return (
     <li className="movies-card">
       <a
         className="movies-card__trailer-link"
-        href={dataFilm.trailerLink}
+        href={dataFilm.trailer}
         target="_blank"
         rel="noreferrer"
       >
         <img
           className="movies-card__image"
-          src={`${baseBeatfilmUrl}${dataFilm.image.url}`}
+          src={`${dataFilm.image}`}
           alt={dataFilm.nameRU}
         />
       </a>

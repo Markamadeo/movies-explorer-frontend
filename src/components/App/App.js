@@ -2,7 +2,6 @@ import { Route, Switch } from "react-router-dom";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
-import { savedCardList } from "../../utils/tamplateCardsList";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
 import Profile from "../Profile/Profile";
@@ -11,8 +10,10 @@ import { useEffect, useState } from "react";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import authApi from "../../utils/authApi";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
+import mainApi from "../../utils/MainApi";
 
 function App() {
+  const [savedMovies, setSavedMovies] = useState([]);
   const [loggedIn, setLoggedIn] = useState({ status: false });
   const [currentUser, setCurrentUser] = useState({
     _id: "",
@@ -37,6 +38,10 @@ function App() {
         }
       })
       .catch((err) => console.log(err));
+
+    mainApi.getSavedMovies().then((movies) => {
+      setSavedMovies([...movies.data]);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -67,12 +72,15 @@ function App() {
             loggedIn={loggedIn}
             component={Movies}
             setLoggedIn={setLoggedIn}
+            savedMovies={savedMovies}
+            setSavedMovies={setSavedMovies}
           />
           <ProtectedRoute
             path="/saved-movies"
             loggedIn={loggedIn}
             component={SavedMovies}
-            cards={savedCardList}
+            savedMovies={savedMovies}
+            setSavedMovies={setSavedMovies}
           />
           <ProtectedRoute
             path="/profile"

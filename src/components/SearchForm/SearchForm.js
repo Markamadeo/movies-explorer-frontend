@@ -1,9 +1,15 @@
 import { useState } from "react";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 
-function SearchForm({ setMoviesContentText, createFilmsList }) {
-  const [shortFilm, setShortFilm] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+function SearchForm({
+  setPreloaderActive,
+  createFilmsList,
+  inputValue,
+  setInputValue,
+  shortFilmFilter,
+  setShortFilmFilter,
+}) {
+  const [filterChecked, setFilterChecked] = useState(false);
 
   function handleChange(evt) {
     setInputValue(evt.target.value);
@@ -12,6 +18,9 @@ function SearchForm({ setMoviesContentText, createFilmsList }) {
   function handleSubmit(evt) {
     evt.preventDefault();
     createFilmsList(inputValue);
+    setFilterChecked(false);
+    setShortFilmFilter(false);
+    setPreloaderActive(true);
   }
 
   return (
@@ -31,7 +40,12 @@ function SearchForm({ setMoviesContentText, createFilmsList }) {
           className="search-form__search-button"
         ></button>
       </div>
-      <FilterCheckbox shortFilm={shortFilm} setShortFilm={setShortFilm} />
+      <FilterCheckbox
+        filterChecked={filterChecked}
+        setFilterChecked={setFilterChecked}
+        shortFilmFilter={shortFilmFilter}
+        setShortFilmFilter={setShortFilmFilter}
+      />
     </form>
   );
 }
