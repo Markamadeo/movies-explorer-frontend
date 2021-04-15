@@ -40,6 +40,10 @@ function App() {
       .catch((err) => console.log(err));
 
     mainApi.getSavedMovies().then((movies) => {
+      if(movies.data.lenght === 0){
+        setSavedMovies([])
+        return;
+      }
       setSavedMovies([...movies.data]);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
