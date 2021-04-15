@@ -1,10 +1,12 @@
-import { useState } from "react";
-
-function FilterCheckbox({ setShortFilm, shortFilm }) {
-  const [checked, setChecked] = useState(false);
+function FilterCheckbox({
+  filterChecked,
+  setFilterChecked,
+  setShortFilmFilter,
+  shortFilmFilter,
+}) {
   function handleChecked() {
-    setChecked(!checked);
-    setShortFilm(!shortFilm);
+    setFilterChecked(!filterChecked);
+    setShortFilmFilter(!shortFilmFilter);
   }
 
   return (
@@ -13,7 +15,7 @@ function FilterCheckbox({ setShortFilm, shortFilm }) {
         onClick={handleChecked}
         type="button"
         className={
-          checked
+          filterChecked
             ? "filter-checkbox__button filter-checkbox__button_active"
             : "filter-checkbox__button"
         }
