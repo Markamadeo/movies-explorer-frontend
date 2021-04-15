@@ -19,7 +19,7 @@ class MainApi {
           `Ошибка: не удалось загрузить данные сохранённых фильмов, статус ${res.status}`
         );
       })
-      .catch((err) => alert(err));
+      .catch((err) => console.log(err));
   }
 
   savedMovie(data) {
@@ -40,7 +40,7 @@ class MainApi {
           `Ошибка: не удалось отправить данные карточки на сервер, статус ${res.status}`
         );
       })
-      .catch((err) => alert(err));
+      .catch((err) => console.log(err));
   }
 
   deleteMovie(id) {
@@ -58,7 +58,7 @@ class MainApi {
           );
         }
       })
-      .catch((err) => alert(err));
+      .catch((err) => console.log(err));
   }
 }
 
